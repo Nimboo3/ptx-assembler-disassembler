@@ -121,3 +121,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Project documentation and context files (generated)
+PROJECT_CONTEXT.md
+
+# Environment variable files (never commit secrets)
+.env
+backend/.env
+frontend/.env
+admin/.env
