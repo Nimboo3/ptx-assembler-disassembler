@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛍️ Shopping Website (MERN Monorepo)
+# 🛍️ Shopping Website (MERN)
 
 Full‑stack food ordering / shopping platform built with the **MERN stack** featuring a customer storefront, admin dashboard, and REST API.
 
@@ -21,7 +21,7 @@ A production‑ready foundation for an e‑commerce / food ordering application.
 
 ---
 
-## ✅ Feature Summary
+##  Feature Summary
 ### Customer
 - Browse categorized products / food items
 - Auth: register, login (JWT)
@@ -43,40 +43,12 @@ A production‑ready foundation for an e‑commerce / food ordering application.
 
 ---
 
-## 🏗️ Architecture (High-Level)
-```
-[React Frontend] --
-						  \            (JWT)          +------------------+
-							--> [Express API] <------> |  MongoDB (Atlas) |
-						  /        |  ^               +------------------+
-[React Admin]  -----         |  |  (Multer)
-										v  v
-									[Uploads/]
-										|
-									(Static /images)
-```
-
----
-
-## 🧰 Tech Stack
+##  Tech Stack
 **Frontend / Admin:** React 18, React Router 6, Axios, Vite, Toastify (admin)
 
 **Backend:** Node.js, Express, Mongoose, Multer, JWT, Bcrypt, Stripe, Validator, CORS, Dotenv
 
 **Dev Tooling:** Nodemon, ESLint
-
----
-
-## 📂 Monorepo Structure
-```
-root
-├── backend/        # API + business logic
-├── frontend/       # Customer UI
-├── admin/          # Admin dashboard
-└── uploads/        # (served via /images) runtime asset store
-```
-
-Internal engineering notes excluded for public distribution.
 
 ---
 
@@ -134,7 +106,7 @@ Secrets are externalized via `.env` files. Production deployment should use envi
 
 ---
 
-## 📡 API Overview (Selected Endpoints)
+##  API Overview (Selected Endpoints)
 | Area | Method | Endpoint | Description |
 |------|--------|----------|-------------|
 | Food | POST | `/api/food/add` | Add new food (multipart image) |
@@ -155,17 +127,17 @@ Authentication: Provide `Authorization: Bearer <token>` for protected routes.
 
 ---
 
-## 🛡️ Security Considerations
+##  Security Considerations
 JWT auth, password hashing (bcrypt), input validation, and isolated protected routes are implemented. Additional enterprise enhancements (rate limiting, centralized logging, externalized storage, webhooks) can be layered as needed.
 
 ---
 
-## 🧪 Testing
+##  Testing
 The architecture is test-ready (controllers and routes decoupled). Suggested stack: Jest + Supertest + React Testing Library (future enhancement).
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 1. Fork repository
 2. Create feature branch: `git checkout -b feat/awesome`
 3. Commit changes: `git commit -m "feat: add awesome"`
@@ -176,12 +148,7 @@ Follow conventional commits where possible (`feat:`, `fix:`, `docs:` etc.).
 
 ---
 
-## 📄 License
-Licensed under the ISC License (see individual `package.json` files). You may adapt to MIT if redistributing.
-
----
-
-## 🙌 Acknowledgements
+##  Acknowledgements
 - Stripe API for payment workflow
 - MongoDB Atlas for managed database hosting
 - Vite for fast frontend dev experience
